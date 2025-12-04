@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>TravelTalk+ Immersive Dialogue</title>
+    <meta
+      name="description"
+      content="TravelTalk+ — 공손함에 반응하는 감성 AI와 실전 여행 영어를 연습하세요."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <script src="./assets/config.js"></script>
+  </head>
+  <body>
+    <div class="background" aria-hidden="true"></div>
+    <header>
+      <h1>TravelTalk+</h1>
+      <p>
+        해외 현장에 있는 듯한 몰입형 배경과 감정 반응형 AI로 실전 여행 영어를 연습하세요.
+        문장 속 공손함과 명확성을 분석해 즉시 피드백합니다.
+      </p>
+    </header>
+    <main>
+      <section class="scene-viewport" aria-label="Immersive scenario view">
+        <img src="" alt="Scene background" />
+        <div class="scene-overlay">
+          <div class="character-figure">
+            <img src="" alt="AI-generated attendant portrait" />
+          </div>
+          <div class="npc-card">
+            <div class="npc-emotion" data-emotion="Neutral">AI Emotion • Neutral</div>
+            <div class="npc-meta">
+              <div class="npc-avatar"></div>
+              <div>
+                <h3 class="npc-name">Guest Relations Lead</h3>
+                <span class="npc-temperament">Empathetic to respectful travelers</span>
+              </div>
+            </div>
+            <p class="npc-dialogue">
+              "안녕하세요! 여행 상황을 선택하고 영어 회화를 연습해보세요. 공손한 표현을 사용하면 더 좋은 반응을 받을 수 있습니다."
+            </p>
+          </div>
+        </div>
+      </section>
+      <aside class="panel">
+        <div class="section-title">
+          <h2 class="scenario-title">여행 상황 선택</h2>
+        </div>
+        <div class="quick-scenario-buttons">
+          <button class="button primary btn-scenario-airport" type="button">
+            <span class="btn-icon">✈️</span>
+            <span class="btn-text">공항</span>
+          </button>
+          <button class="button primary btn-scenario-restaurant" type="button">
+            <span class="btn-icon">🍽️</span>
+            <span class="btn-text">식당</span>
+          </button>
+          <button class="button primary btn-scenario-directions" type="button">
+            <span class="btn-icon">🗺️</span>
+            <span class="btn-text">길 묻기</span>
+          </button>
+        </div>
+        <p class="scenario-complication">
+          Unexpected complication details will appear here to prevent rote memorization.
+        </p>
+        <div class="objectives"></div>
+
+        <section class="dialogue-window" aria-label="Dialogue interface">
+          <div class="chat-log" aria-live="polite" aria-label="Chat transcript"></div>
+          <form class="dialogue-form">
+            <div class="input-area">
+              <textarea
+                name="user-text"
+                placeholder="예) Excuse me, could you help me with my reservation please?"
+                aria-label="Type your response"
+              ></textarea>
+              <div class="controls">
+                <button class="button primary" type="submit">전송 &amp; 평가</button>
+                <div class="pcsm-display">
+                  <span>PCSM</span>
+                  <strong class="pcsm-value">0.00</strong>
+                </div>
+              </div>
+              <div class="pcsm-bar">
+                <div class="pcsm-progress"></div>
+              </div>
+            </div>
+          </form>
+        </section>
+
+        <section class="feedback" aria-label="Immediate feedback">
+          <div class="feedback-card">
+            <h3>LINGUISTIC FEEDBACK</h3>
+            <p class="feedback-linguistic">
+              공손한 표현, 문장 길이, 문장 부호 등을 기반으로 즉시 교정 피드백이 표시됩니다.
+            </p>
+          </div>
+          <div class="feedback-card">
+            <h3>ATTITUDINAL FEEDBACK</h3>
+            <p class="feedback-attitudinal">
+              AI 캐릭터가 어떤 감정을 느꼈는지와 그 이유, 개선 방법을 설명합니다.
+            </p>
+          </div>
+        </section>
+
+        <section aria-label="Negative interactions log">
+          <h3>Review Moments</h3>
+          <p class="muted">
+            Annoyed 상태로 판단된 발화가 자동으로 기록되며, 개인화된 복습 세션에 활용됩니다.
+          </p>
+          <ul class="log-panel negative-log"></ul>
+        </section>
+
+        <section aria-label="Speech practice">
+          <h3>말하기 연습 &amp; AI 평가</h3>
+          <p class="muted">
+            브라우저에서 Web Speech API를 지원하면 자동으로 텍스트를 추출해 공손함 점수를 계산합니다.
+          </p>
+          <div class="controls">
+            <button class="button secondary btn-record" type="button">🎙️ 말하기 녹음</button>
+            <button class="button secondary btn-evaluate-recording" type="button">
+              📊 녹음 평가
+            </button>
+          </div>
+          <audio class="recording-playback hidden" controls></audio>
+          <p class="recording-transcript muted"></p>
+          <div class="feedback-card recording-feedback"></div>
+        </section>
+      </aside>
+    </main>
+
+    <footer>
+      © 2025 TravelTalk+. 공손함을 지키는 여행자에게 세계가 더 친절해집니다.
+    </footer>
+    <script src="./assets/app.js" type="module"></script>
+  </body>
+</html>
+
